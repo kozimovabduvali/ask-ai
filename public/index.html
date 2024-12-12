@@ -15,8 +15,8 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="bg-brand-secondary w-full sticky top-0 py-2.5">
-    <nav class="max-w-base flex items-center justify-between mx-auto px-5">
+  <header class="bg-brand-secondary w-full sticky z-50 top-0 py-2.5">
+    <nav class="max-w-base flex items-center justify-between mx-auto px-4 lg:px-6">
       <!-- Logo -->
       <a class="shrink-0 flex items-center gap-2.5 text-white" href="#">
         <img class="size-30" src="./assets/icon/logo.svg" alt="Logo">
@@ -25,7 +25,7 @@
       <!-- Login & Register  -->
       <div class="hidden lg:flex items-center gap-x-30">
         <button class="transition duration-300 hover:opacity-75">Вход</button>
-        <button class="bg-white text-brand-dark rounded-full button-custom px-10 py-3">Регистрация</button>
+        <button class="bg-white text-brand-dark text-base/[0.95rem] rounded-full button-custom px-10 py-3">Регистрация</button>
       </div>
       <!-- Menu Btn -->
       <button class="block lg:hidden shrink-0 transition duration-300 hover:opacity-75">
@@ -38,8 +38,8 @@
   <!-- Main -->
   <main>
     <!-- Hero -->
-    <section class="pt-30 lg:mt-30">
-      <div class="max-w-base mx-auto px-5 pt-2">
+    <section class="pt-30 lg:mt-30 overflow-x-clip">
+      <div class="max-w-base mx-auto px-4 lg:px-6 pt-2">
         <div class="text-center">
           <h1 class="text-4xl lg:text-44 xl:text-56 font-days-one">
             Нейросеть онлайн без VPN
@@ -48,19 +48,29 @@
             Генерируйте любые тексты: от рекламных слоганов до литературных произведений. Быстро и без усилий!
           </p>
           <!-- Enter Your Query -->
-          <form class="max-w-[28.75rem] mx-auto flex items-stretch gap-2 bg-brand-dark-gray rounded-full p-five mt-4 lg:mt-30 overflow-hidden" action="">
-            <input class="main-search w-full bg-transparent outline-none placeholder:text-sm placeholder:text-white/50 px-4" placeholder="Введите свой запрос" type="text" name="search" id="search">
-            <button class="button-custom text-sm bg-white text-black rounded-full px-[1.375rem] py-2.5">Попробовать</button>
+          <form class="border border-[#999999]/50 relative max-w-[28.75rem] mx-auto flex items-stretch gap-2 bg-brand-dark-gray rounded-full p-five mt-4 lg:mt-30 overflow-" action="">
+            <input class="relative z-10 main-search w-full bg-transparent outline-none placeholder:text-sm placeholder:text-white/50 px-4" placeholder="Введите свой запрос" type="text" name="search" id="search">
+            <button class="relative z-10 button-custom border !border-[#A5A5A5]/50 text-sm bg-white text-black rounded-full px-[1.375rem] py-2.5">Попробовать</button>
           </form>
           <!-- Free Registration -->
           <div class="flex items-center justify-center gap-5 mt-15">
-            <p class="text-sm">Бесплатная регистрация</p>
+            <p class="text-xs md:text-sm">Бесплатная регистрация</p>
             <svg class="shrink-0" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 1C5 1 5 5 9 5L5 1ZM5 1C5 5 1 5 1 5L5 1ZM5 1V0V1ZM9 5C9 5 5 5 5 9L9 5ZM9 5H10H9ZM5 9C5 9 5 5 1 5L5 9ZM5 9V10V9ZM1 5H0H1Z" fill="white"/>
               <path d="M5 1C5 1 5 5 9 5M5 1C5 5 1 5 1 5M5 1V0M9 5C9 5 5 5 5 9M9 5H10M1 5C5 5 5 9 5 9M1 5H0M5 9V10" stroke="white"/>
             </svg>              
-            <p class="text-sm">3 дня бесплатно</p>
+            <p class="text-xs md:text-sm">3 дня бесплатно</p>
           </div>
+        </div>
+        <!-- Gif -->
+        <div class="relative px-0.5 mt-[6.8125rem] mb-[7.4375rem]">
+          <div class="relative z-10 aspect-square sm:aspect-video lg:aspect-[1153/465] rounded-15 overflow-hidden">
+            <img class="size-full object-cover object-left-top" src="./assets/gif/hero.gif" alt="hero">
+          </div>
+          <!-- shadow -->
+          <img class="shadow-top absolute top-0 left-0 -translate-y-1/3 z-0"  src="./assets/img/shadow-toppng.png" alt="shadow"></img>
+          <img class="shadow-left absolute left-0 -translate-x-1/3 z-0 -top-1/4 xs:top-[20%] xs:!-my-40"  src="./assets/img/shadow-left.png" alt="shadow"></img>
+          <img class="shadow-right absolute right-0 translate-x-1/3 z-0 -top-1/4 xs:top-[20%] xs:!-my-40"  src="./assets/img/shadow-left.png" alt="shadow"></img>
         </div>
       </div>
     </section>

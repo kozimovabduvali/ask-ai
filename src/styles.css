@@ -23,3 +23,37 @@ h1, h2, h3, h4, h5, h6 {
 .button-custom {
   @apply border border-transparent transition duration-300 hover:bg-white/10 hover:border-white hover:text-white
 }
+
+.gradient-border-rounded span {
+	margin: auto;
+}
+
+/* Animation uchun @keyframes */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Top element doimiy animatsiya qiladi */
+.shadow-top {
+  animation: fadeInOut 2.8s infinite; /* Doimiy animatsiya */
+}
+
+/* Left va Right uchun navbat bilan animatsiya */
+.shadow-left {
+  animation: fadeInOut 3s infinite;
+  /* animation-delay: 0s; Left birinchi */
+}
+
+.shadow-right {
+  animation: fadeInOut 3s infinite;
+  /* animation-delay: 1.5s; Right left'dan keyin boshlanadi */
+}
+

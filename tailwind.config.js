@@ -21,7 +21,7 @@ module.exports = {
         '56': ['56px', '4.4556rem'],
       },
       maxWidth: {
-        base: '75rem',
+        base: '75.5rem',
       },
       colors: {
         brand: {
@@ -43,6 +43,9 @@ module.exports = {
         'five': '0.3125rem',
         '15': '0.9375rem',
         '30': '1.875rem',
+      },
+      borderRadius: {
+        '15': '0.9375rem',
       }
     },
   },
