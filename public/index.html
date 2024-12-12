@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Font Gilroy -->
+  <link rel="stylesheet" href="./font/days-one/stylesheet.css">
+  <!-- Font Days One -->
+  <link rel="stylesheet" href="./font/days-one/stylesheet.css">
+  <!-- Title Icon -->
+  <link rel="icon" type="icon" href="./assets/icon/logo.svg">
+  <title>Box AI</title>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-brand-secondary w-full sticky top-0 py-2.5">
+    <nav class="max-w-base flex items-center justify-between mx-auto px-5">
+      <!-- Logo -->
+      <a class="shrink-0 flex items-center gap-2.5 text-white" href="#">
+        <img class="size-30" src="./assets/icon/logo.svg" alt="Logo">
+        <span class="font-medium text-base">Ai Box</span>
+      </a>
+      <!-- Login & Register  -->
+      <div class="hidden lg:flex items-center gap-x-30">
+        <button class="transition duration-300 hover:opacity-75">Вход</button>
+        <button class="bg-white text-brand-dark rounded-full button-custom px-10 py-3">Регистрация</button>
+      </div>
+      <!-- Menu Btn -->
+      <button class="block lg:hidden shrink-0 transition duration-300 hover:opacity-75">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>        
+      </button>
+    </nav>
+  </header>
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="pt-30 lg:mt-30">
+      <div class="max-w-base mx-auto px-5 pt-2">
+        <div class="text-center">
+          <h1 class="text-4xl lg:text-44 xl:text-56 font-days-one">
+            Нейросеть онлайн без VPN
+          </h1>
+          <p class="text-brand-green-600 lg:text-xl/6 max-w-[36.5rem] mt-2.5 lg:mt-15 mx-auto">
+            Генерируйте любые тексты: от рекламных слоганов до литературных произведений. Быстро и без усилий!
+          </p>
+          <!-- Enter Your Query -->
+          <form class="max-w-[28.75rem] mx-auto flex items-stretch gap-2 bg-brand-dark-gray rounded-full p-five mt-4 lg:mt-30 overflow-hidden" action="">
+            <input class="main-search w-full bg-transparent outline-none placeholder:text-sm placeholder:text-white/50 px-4" placeholder="Введите свой запрос" type="text" name="search" id="search">
+            <button class="button-custom text-sm bg-white text-black rounded-full px-[1.375rem] py-2.5">Попробовать</button>
+          </form>
+          <!-- Free Registration -->
+          <div class="flex items-center justify-center gap-5 mt-15">
+            <p class="text-sm">Бесплатная регистрация</p>
+            <svg class="shrink-0" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 1C5 1 5 5 9 5L5 1ZM5 1C5 5 1 5 1 5L5 1ZM5 1V0V1ZM9 5C9 5 5 5 5 9L9 5ZM9 5H10H9ZM5 9C5 9 5 5 1 5L5 9ZM5 9V10V9ZM1 5H0H1Z" fill="white"/>
+              <path d="M5 1C5 1 5 5 9 5M5 1C5 5 1 5 1 5M5 1V0M9 5C9 5 5 5 5 9M9 5H10M1 5C5 5 5 9 5 9M1 5H0M5 9V10" stroke="white"/>
+            </svg>              
+            <p class="text-sm">3 дня бесплатно</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

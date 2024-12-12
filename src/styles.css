@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+  body {
+    @apply font-gilroy text-base text-white bg-brand-body  overflow-x-hidden 
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Days One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button-custom {
+  @apply border border-transparent transition duration-300 hover:bg-white/10 hover:border-white hover:text-white
+}
