@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: auto;
 }
 
-/* Animation uchun @keyframes */
+/* Animation @keyframes */
 @keyframes fadeInOut {
   0% {
     opacity: 0;
@@ -41,19 +41,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Top element doimiy animatsiya qiladi */
 .shadow-top {
-  animation: fadeInOut 2.8s infinite; /* Doimiy animatsiya */
+  animation: fadeInOut 2.8s infinite;
 }
-
-/* Left va Right uchun navbat bilan animatsiya */
 .shadow-left {
   animation: fadeInOut 3s infinite;
-  /* animation-delay: 0s; Left birinchi */
 }
 
 .shadow-right {
   animation: fadeInOut 3s infinite;
-  /* animation-delay: 1.5s; Right left'dan keyin boshlanadi */
 }
 
+.custom-shadow {
+  box-shadow: 0px 0px 40px 0px #4F927973;
+}

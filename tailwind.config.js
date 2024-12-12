@@ -27,9 +27,11 @@ module.exports = {
         brand: {
           body: '#0C0C0C',
           dark: '#080808',
+          primary: '#767676',
           secondary: '#191919',
           gray: {
             100: '#D9D9D9',
+            200: '#E3E3E3',
           },
           green: {
             400: '#4F9279',
@@ -42,6 +44,7 @@ module.exports = {
       spacing: {
         'five': '0.3125rem',
         '15': '0.9375rem',
+        '25': '1.5625rem',
         '30': '1.875rem',
       },
       borderRadius: {
