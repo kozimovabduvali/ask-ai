@@ -51,7 +51,14 @@ h1, h2, h3, h4, h5, h6 {
 .shadow-right {
   animation: fadeInOut 3s infinite;
 }
-
+.shadow-bottom {
+  animation: fadeInOut 3s infinite;
+}
 .custom-shadow {
   box-shadow: 0px 0px 40px 0px #4F927973;
+}
+
+.hero-gif::after {
+  content: '';
+  @apply absolute top-0 z-[2] size-full bg-gradient-to-t to-[#191919]/5  from-[#0C0C0C]/100 rounded-15
 }
