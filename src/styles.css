@@ -9,8 +9,9 @@
   html {
     @apply scroll-smooth
   }
+
   body {
-    @apply font-gilroy text-base text-white bg-brand-body  overflow-x-hidden 
+    @apply font-gilroy text-base text-white bg-brand-body overflow-x-hidden
   }
 }
 
@@ -25,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-border-rounded span {
-	margin: auto;
+  margin: auto;
 }
 
 /* Animation @keyframes */
@@ -33,9 +34,11 @@ h1, h2, h3, h4, h5, h6 {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -44,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 .shadow-top {
   animation: fadeInOut 2.8s infinite;
 }
+
 .shadow-left {
   animation: fadeInOut 3s infinite;
 }
@@ -51,14 +55,25 @@ h1, h2, h3, h4, h5, h6 {
 .shadow-right {
   animation: fadeInOut 3s infinite;
 }
+
 .shadow-bottom {
   animation: fadeInOut 3s infinite;
 }
+
 .custom-shadow {
   box-shadow: 0px 0px 40px 0px #4F927973;
 }
 
+.border-custom {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background:
+    linear-gradient(black, black) padding-box,
+    linear-gradient(116.19deg, #767676 33.52%, #4B4B4B 100.92%) border-box;
+  background-clip: padding-box, border-box;
+}
+
 .hero-gif::after {
   content: '';
-  @apply absolute top-0 z-[2] size-full bg-gradient-to-t to-[#191919]/5  from-[#0C0C0C]/100 rounded-15
+  @apply absolute top-0 z-[2] size-full bg-gradient-to-t to-[#191919]/5 from-[#0C0C0C]/100 rounded-15
 }
