@@ -15,7 +15,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="bg-brand-secondary w-full sticky z-50 top-0 py-2.5">
+  <header class="bg-brand-secondary w-full sticky z-[40] top-0 py-2.5">
     <nav class="max-w-base flex items-center justify-between mx-auto px-4 lg:px-6">
       <!-- Logo -->
       <a class="shrink-0 flex items-center gap-2.5 text-white" href="#">
@@ -28,13 +28,45 @@
         <button class="bg-white text-brand-dark text-base/[0.95rem] rounded-full button-custom px-10 py-3">Регистрация</button>
       </div>
       <!-- Menu Btn -->
-      <button class="block lg:hidden shrink-0 transition duration-300 hover:opacity-75">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+      <button class="text-white menu-btn relative z-50 group block lg:hidden shrink-0 transition duration-300 hover:opacity-75">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu-open shrink-0 size-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>        
+        <!-- X Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu-close hidden size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>        
       </button>
     </nav>
   </header>
+  <!-- Left -->
+  <div
+  class="menu-left lg:hidden fixed z-[40] left-0 top-0 size-full bg-black/25 transition duration-100 -translate-x-full"
+    ></div>
+    <!-- Mobile Menu -->
+    <div
+      class="mobile-menu block lg:hidden bg-brand-body fixed z-[45] right-0 top-0 translate-x-full w-4/5 h-full min-h-full transition duration-300 p-15"
+    >
+      <!-- Link -->
+      <div
+        class="h-[calc(100vh-230px)] flex flex-col items-center gap-15 pt-32"
+      >
+        <a class="transition duration-300 hover:text-secondary" href="#"
+          >Link 1</a
+        >
+        <a class="transition duration-300 hover:text-secondary" href="#"
+          >Link 2</a
+        >
+        <a class="transition duration-300 hover:text-secondary" href="#"
+          >Link 3</a
+        >
+      </div>
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-15 pt-15">
+        <button class="transition duration-300 hover:opacity-75">Вход</button>
+        <button class="bg-white text-brand-dark text-base/[0.95rem] rounded-full button-custom px-10 py-3">Регистрация</button>
+      </div>
+    </div>                      
   <!-- Main -->
   <main>
     <!-- Hero -->

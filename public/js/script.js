@@ -1,3 +1,35 @@
+const menuBtn = document.querySelector(".menu-btn");
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileLeft = document.querySelector(".menu-left");
+const body = document.body;
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  menuOpen.classList.toggle("hidden");
+  menuClose.classList.toggle("hidden");
+  mobileMenu.classList.toggle("translate-x-0");
+  mobileMenu.classList.toggle("translate-x-full");
+  mobileLeft.classList.toggle("translate-x-0");
+  mobileLeft.classList.toggle("-translate-x-full");
+  body.classList.toggle("overflow-hidden");
+});
+
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    menuOpen.classList.remove("hidden");
+    menuClose.classList.add("hidden");
+    mobileMenu.classList.add("translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    mobileLeft.classList.remove("translate-x-0");
+    mobileLeft.classList.add("-translate-x-full");
+    body.classList.remove("overflow-hidden");
+  }
+});
+
+
+
 // Typing Effect
 const txt = "Введите свой запрос!"; 
 const inputElements = document.querySelectorAll('.main-search'); 
