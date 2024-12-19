@@ -98,3 +98,25 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   @apply absolute shadow-rounded top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[-1] size-[105%] rounded-full backdrop-blur-3xl blur-xl bg-[#10A37F]
 }
+
+
+/* accourdion */
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Open Klass Qo'shilganda */
+.accordion__content.open {
+  max-height: 500px; /* Yetarlicha joy ajratiladi */
+}
+
+/* Rotate uchun klasslar */
+.rotate-0 {
+  transform: rotate(0deg);
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
