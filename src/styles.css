@@ -30,19 +30,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animation @keyframes */
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
 
-  50% {
-    opacity: 1;
-  }
+    50% {
+      opacity: 1;
+    }
 
-  100% {
-    opacity: 0;
+    100% {
+      opacity: 0;
+    }
   }
-}
 
 .shadow-top {
   animation: fadeInOut 2.8s infinite;
@@ -60,11 +60,18 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeInOut 3s infinite;
 }
 
+.shadow-rounded {
+  animation: fadeInOut 3s infinite;
+}
 .custom-shadow {
   box-shadow: 0px 0px 40px 0px #4F927973;
 }
 
-.border-custom {
+.shadow-custom::after {
+  content: '';
+  @apply absolute shadow-rounded top-0 left-0 z-[-1] size-full backdrop-blur-3xl blur-xl bg-[#10A37F]
+}
+.border-custom-2 {
   border: 1px solid transparent;
   border-radius: 15px;
   background:
@@ -72,8 +79,22 @@ h1, h2, h3, h4, h5, h6 {
     linear-gradient(116.19deg, #767676 33.52%, #4B4B4B 100.92%) border-box;
   background-clip: padding-box, border-box;
 }
+.border-custom {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background:
+    linear-gradient(#101010, #101010) padding-box,
+    linear-gradient(116.19deg, #767676 33.52%, #4B4B4B 100.92%) border-box;
+  background-clip: padding-box, border-box;
+}
 
 .hero-gif::after {
   content: '';
   @apply absolute top-0 z-[2] size-full bg-gradient-to-t to-[#191919]/5 from-[#0C0C0C]/100 rounded-15
+}
+
+
+.box-ball::after {
+  content: '';
+  @apply absolute shadow-rounded top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[-1] size-[105%] rounded-full backdrop-blur-3xl blur-xl bg-[#10A37F]
 }
