@@ -1,38 +1,44 @@
 // Typing Effect
-const txt = "Введите свой запрос!";
-const txtLen = txt.length;
-let char = 0;
-let timeOut;
+const txt = "Введите свой запрос!"; 
+const inputElements = document.querySelectorAll('.main-search'); 
 
-const inputElement = document.querySelector('.main-search');
+function typeEffect(inputElement) {
+  let char = 0;
+  const txtLen = txt.length;
+  let timeOut;
 
-inputElement.setAttribute('placeholder', '|');
-
-function typeIt() {
-  const humanize = Math.round(Math.random() * (200 - 30)) + 30;
-  timeOut = setTimeout(function () {
-    char++;
-    const type = txt.substring(0, char);
-    inputElement.setAttribute('placeholder', type + '|');
-
-    if (char === txtLen) {
-      setTimeout(() => {
-        clearTimeout(timeOut);
-        resetTyping();
-      }, 2000);
-    } else {
-      typeIt();
-    }
-  }, humanize);
-}
-
-function resetTyping() {
-  char = 0;
   inputElement.setAttribute('placeholder', '|');
+
+  function typeIt() {
+    const humanize = Math.round(Math.random() * (200 - 30)) + 30;
+    timeOut = setTimeout(function () {
+      char++;
+      const type = txt.substring(0, char);
+      inputElement.setAttribute('placeholder', type + '|');
+
+      if (char === txtLen) {
+        setTimeout(() => {
+          clearTimeout(timeOut);
+          resetTyping();
+        }, 2000);
+      } else {
+        typeIt();
+      }
+    }, humanize);
+  }
+
+  function resetTyping() {
+    char = 0;
+    inputElement.setAttribute('placeholder', '|');
+    typeIt();
+  }
+
   typeIt();
 }
 
-typeIt();
+inputElements.forEach((element) => {
+  typeEffect(element);
+});
 
 
 
